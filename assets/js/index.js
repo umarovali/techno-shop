@@ -1,3 +1,5 @@
+// swiepr hero
+
 document.addEventListener('DOMContentLoaded', () => {
     const heroSwiper = new Swiper('.hero-swiper', {
         loop: true,
@@ -15,6 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// infinity swiper
+
 document.addEventListener('DOMContentLoaded', () => {
     const benefitsSwiper = new Swiper('.benefits-brands-swiper', {
         loop: true,
@@ -31,3 +35,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// scrol mini card
+
+const wrapperMiniCard = document.querySelector('.product_mini_scrool');
+const listMiniCard = document.querySelector('.product_mini_wrapper');
+
+function updateScrollAlign() {
+    if (listMiniCard.scrollWidth > wrapperMiniCard.clientWidth) {
+        listMiniCard.style.margin = '0';
+    } else {
+        listMiniCard.style.margin = '0 auto';
+    }
+}
+
+updateScrollAlign();
+window.addEventListener('resize', updateScrollAlign);
+
+// swiper card
+
+const productSwiper = new Swiper('.product-swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 60,
+    speed: 600,
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    grabCursor: true,
+});
