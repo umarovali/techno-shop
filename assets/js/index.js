@@ -58,10 +58,31 @@ const productSwiper = new Swiper('.product-swiper', {
     spaceBetween: 60,
     speed: 600,
 
+    slidesOffsetBefore: 90,
+    slidesOffsetAfter: 90,
+
+
+    roundLengths: true,
+    watchOverflow: true,
+
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
 
     grabCursor: true,
+
+
+    breakpoints: {
+        0: {
+            spaceBetween: 10,
+            slidesOffsetBefore: 15,
+            slidesOffsetAfter: 15,
+        },
+        431: {
+            spaceBetween: 60,
+            slidesOffsetBefore: 90,
+            slidesOffsetAfter: 90,
+        },
+    },
 });
