@@ -3,9 +3,16 @@
   --white: #ffffff;
   --black: #333333;
   --gray: #a0a0a0;
+  --orange: #ff8137;
+  --prd-color-white: #d3d3d3;
+  --prd-color-white-light: #f1f2ed;
+  --prd-color-navy: #7bb1d4;
+  --prd-color-turquoise: #4a6293;
+  --prd-color-black: #3a3a3a;
+  --prd-color-black-turquoise: #49556b;
+  --prd-color-orange: #ff8137;
 
   /* fonts */
-
   --pro-display: "SF Pro Display", sans-serif;
 }
 
@@ -284,4 +291,130 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 110%;
+}
+
+/* best */
+
+.best {
+  padding-top: 100px;
+}
+
+.best_wrapper {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+  row-gap: 30px;
+}
+
+.best_item {
+  position: relative;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.best_buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+
+.best_btn {
+  color: var(--white);
+  font-family: var(--pro-display);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 13px;
+  border-radius: 20px;
+  padding: 7px 15px;
+}
+
+.best_btn-orange {
+  background: var(--orange);
+}
+
+.best_btn-black {
+  background: var(--black);
+}
+
+.best_foto_bg {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.best_foto {
+  width: 75%;
+  height: 75%;
+  object-fit: contain;
+}
+
+.best_title {
+  font-family: var(--pro-display);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 100%;
+  text-align: center;
+}
+
+.best_price {
+  font-family: var(--pro-display);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.best_color_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+/* product colors */
+
+.prd_color {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  box-shadow:
+    inset 2px 2px 7px 0px rgba(0, 0, 0, 0.25),
+    3px -1px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+.prd_color-white {
+  background: var(--prd-color-white);
+}
+
+.prd_color-white-light {
+  background: var(--prd-color-white-light);
+}
+
+.prd_color-navy {
+  background: var(--prd-color-navy);
+}
+
+.prd_color-turquoise {
+  background: var(--prd-color-turquoise);
+}
+
+.prd_color-black {
+  background: var(--prd-color-black);
+}
+
+.prd_color-black-turquoise {
+  background: var(--prd-color-black-turquoise);
+}
+
+.prd_color-orange {
+  background: var(--prd-color-orange);
 }
