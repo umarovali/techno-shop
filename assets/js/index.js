@@ -65,6 +65,8 @@ const productSwiper = new Swiper('.product-swiper', {
     roundLengths: true,
     watchOverflow: true,
 
+    centerInsufficientSlides: true,
+
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',

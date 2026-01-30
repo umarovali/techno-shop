@@ -1,19 +1,19 @@
 var swiper = new Swiper(".siwper_thumbus", {
-    direction: "vertical",
-    spaceBetween: 10,
-    slidesPerView: "auto",
-    freeMode: true,
-    watchSlidesProgress: true,
+  direction: "vertical",
+  spaceBetween: 10,
+  slidesPerView: "auto",
+  freeMode: true,
+  watchSlidesProgress: true,
 });
 
 var swiper2 = new Swiper(".swiper-card", {
-    pagination: {
-        el: ".swiper-pagination",
-    },
-    spaceBetween: 5,
-    thumbs: {
-        swiper: swiper,
-    },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  spaceBetween: 5,
+  thumbs: {
+    swiper: swiper,
+  },
 });
 
 // charapter drop down menu
@@ -22,12 +22,12 @@ const chapterArrow = document.querySelector("#chapter_list");
 const chapterList = document.querySelector(".chapter_nav_list");
 
 chapterArrow.addEventListener("click", () => {
-    chapterArrow.classList.toggle("rotate"); 
-    chapterList.classList.toggle("open");    
+  chapterArrow.classList.toggle("rotate");
+  chapterList.classList.toggle("open");
 });
 
 
-// video
+// video play pouse
 
 document.addEventListener("DOMContentLoaded", () => {
   const video = document.querySelector(".video_wrapper video");
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   playBtn.addEventListener("click", () => {
     if (video.paused) {
-      video.muted = false;     
+      video.muted = false;
       video.play();
 
       icon.classList.remove("fa-play");
@@ -56,3 +56,33 @@ document.addEventListener("DOMContentLoaded", () => {
     icon.classList.add("fa-play");
   });
 });
+
+// recent swiper
+
+const recentSwiper = new Swiper('.recent-swiper', {
+  slidesPerView: 'auto',
+  spaceBetween: 20,
+  speed: 600,
+
+  watchOverflow: true,
+  centerInsufficientSlides: true, // центрируем, если мало карточек
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  breakpoints: {
+    0: {
+      spaceBetween: 10,
+      slidesOffsetBefore: 15,
+      slidesOffsetAfter: 15,
+    },
+    431: {
+      spaceBetween: 20,
+      slidesOffsetBefore: 0,
+      slidesOffsetAfter: 0,
+    },
+  },
+});
+
