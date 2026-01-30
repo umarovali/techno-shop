@@ -16,10 +16,43 @@ var swiper2 = new Swiper(".swiper-card", {
     },
 });
 
+// charapter drop down menu
+
 const chapterArrow = document.querySelector("#chapter_list");
 const chapterList = document.querySelector(".chapter_nav_list");
 
 chapterArrow.addEventListener("click", () => {
     chapterArrow.classList.toggle("rotate"); 
     chapterList.classList.toggle("open");    
+});
+
+
+// video
+
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.querySelector(".video_wrapper video");
+  const playBtn = document.querySelector(".video_play");
+  const icon = playBtn.querySelector("i");
+
+  video.pause();
+
+  playBtn.addEventListener("click", () => {
+    if (video.paused) {
+      video.muted = false;     
+      video.play();
+
+      icon.classList.remove("fa-play");
+      icon.classList.add("fa-pause");
+    } else {
+      video.pause();
+
+      icon.classList.remove("fa-pause");
+      icon.classList.add("fa-play");
+    }
+  });
+
+  video.addEventListener("ended", () => {
+    icon.classList.remove("fa-pause");
+    icon.classList.add("fa-play");
+  });
 });
