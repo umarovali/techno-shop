@@ -812,13 +812,20 @@
   .chapter_nav {
     margin: 0 15px;
     width: auto;
-    height: 35px;
+    height: auto;
     background: transparent;
     display: flex;
-    align-items: end;
+    align-items: start;
     justify-content: space-between;
     border-top: 0.5px solid #7e7e81;
     margin-bottom: 30px;
+    padding-top: 20px;
+  }
+
+  .chapter_nav_list {
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
   }
 
   .chapter_nav_text {
@@ -831,6 +838,15 @@
   }
 
   .chapter_arrow {
+    display: initial;
+  }
+
+  .chapter_arrow.rotate {
+    transform: rotate(180deg);
+    transition: 0.3s;
+  }
+
+  .chapter_nav_list.open .chapter_nav_text {
     display: initial;
   }
 
@@ -877,7 +893,7 @@
   }
 
   .chapters_card {
-    height: 493px;
+    width: 100%;
   }
 
   .chapters_card img {

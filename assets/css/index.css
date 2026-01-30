@@ -454,8 +454,11 @@
   margin-bottom: 50px;
   scroll-behavior: smooth;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
   padding: 15px 0;
+}
+
+.product_mini_scrool::-webkit-scrollbar {
+  display: none;
 }
 
 .product_mini_wrapper {
@@ -607,6 +610,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 15px;
 }
 
 .article_item {

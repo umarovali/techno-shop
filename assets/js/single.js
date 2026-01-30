@@ -15,3 +15,11 @@ var swiper2 = new Swiper(".swiper-card", {
         swiper: swiper,
     },
 });
+
+const chapterArrow = document.querySelector("#chapter_list");
+const chapterList = document.querySelector(".chapter_nav_list");
+
+chapterArrow.addEventListener("click", () => {
+    chapterArrow.classList.toggle("rotate"); 
+    chapterList.classList.toggle("open");    
+});
