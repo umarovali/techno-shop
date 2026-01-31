@@ -864,7 +864,7 @@
   /* chapters */
 
   .chapter_nav {
-    margin: 0 15px;
+    margin: 30px 15px;
     width: auto;
     height: auto;
     background: transparent;
@@ -872,7 +872,6 @@
     align-items: start;
     justify-content: space-between;
     border-top: 0.5px solid #7e7e81;
-    margin-bottom: 30px;
   }
 
   .chapter_nav_list {
