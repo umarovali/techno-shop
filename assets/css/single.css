@@ -411,14 +411,13 @@
   line-height: 130%;
 }
 
-.chapter_nav_text-active {
-  color: var(--orange);
+.chapter_arrow {
+  display: none !important;
+  color: var(--dark-black);
 }
 
-.chapter_arrow {
-  color: var(--dark-black);
-  display: none;
-  background: transparent;
+.chapter_nav_text-active {
+  color: var(--orange);
 }
 
 .chapters_foto {
@@ -582,12 +581,11 @@
 .recent_wrapper {
   margin-top: 24px;
   display: flex;
+  justify-content: space-between;
   padding-bottom: 130px;
 }
 
 .best_item {
-  width: 300px !important;
-  min-width: 300px !important;
   position: relative;
   padding: 15px;
   cursor: pointer;
@@ -810,24 +808,13 @@
 
   .benefits_wrapper {
     margin-top: 20px;
-    grid-row: 2/3;
-    display: flex;
-    gap: 5px;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    padding: 0 15px;
-  }
-
-  .benefits_wrapper::-webkit-scrollbar {
-    display: none;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
   }
 
   .benefits_item {
-    min-width: 105px;
-    width: 105px;
-    padding: 10px;
+    padding: 15px;
   }
 
   .benefits_item img {
@@ -836,12 +823,13 @@
   }
 
   .benefits_title {
-    padding-top: 10px;
-    font-size: 10px;
+    padding-top: 20px;
+    font-size: 18px;
   }
 
   .benefits_subtitle {
-    display: none;
+    padding-top: 5px;
+    font-size: 16px;
   }
 
   /* chapters */
@@ -856,17 +844,25 @@
     justify-content: space-between;
     border-top: 0.5px solid #7e7e81;
     margin-bottom: 30px;
-    padding-top: 20px;
   }
 
   .chapter_nav_list {
+    width: 100%;
     flex-direction: column;
     align-items: start;
-    gap: 15px;
+    gap: 0;
+  }
+
+  .chapter_arrow {
+    transition: 0.3s;
   }
 
   .chapter_nav_text {
+    width: 100%;
     display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
   }
 
   .chapter_nav_text-active {
@@ -875,16 +871,17 @@
   }
 
   .chapter_arrow {
-    display: initial;
+    display: initial !important;
   }
 
-  .chapter_arrow.rotate {
-    transform: rotate(180deg);
-    transition: 0.3s;
+  .chapter_arrow.rotate-right {
+    transform: rotate(-90deg);
   }
 
   .chapter_nav_list.open .chapter_nav_text {
-    display: initial;
+    display: flex;
+    border-bottom: 0.5px solid #7e7e81;
+    padding-bottom: 15px;
   }
 
   .chapters_foto {
@@ -960,10 +957,15 @@
     text-align: center;
   }
 
+  .recent_wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    row-gap: 25px;
+  }
+
   .best_item {
     padding: 6px;
-    width: 158px !important;
-    min-width: 158px !important;
   }
 
   .best_buttons {

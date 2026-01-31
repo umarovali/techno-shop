@@ -404,14 +404,20 @@
       <section class="chapters">
         <nav class="chapter_nav">
           <ul class="chapter_nav_list">
-            <li class="chapter_nav_text chapter_nav_text-active">Описание</li>
-            <li class="chapter_nav_text">Технические характеристики</li>
-            <li class="chapter_nav_text">Отзывы</li>
+            <li class="chapter_nav_text chapter_nav_text-active">
+              Описание
+              <i
+                class="fa-solid fa-chevron-down chapter_arrow chapter_arrow-top"
+              ></i>
+            </li>
+            <li class="chapter_nav_text">
+              Технические характеристики
+              <i class="fa-solid fa-chevron-down chapter_arrow"></i>
+            </li>
+            <li class="chapter_nav_text">
+              Отзывы <i class="fa-solid fa-chevron-down chapter_arrow"></i>
+            </li>
           </ul>
-
-          <button class="chapter_arrow" id="chapter_list">
-            <i class="fa-solid fa-chevron-down"></i>
-          </button>
         </nav>
 
         <div class="container">
@@ -560,11 +566,8 @@
       <section class="recent">
         <div class="container">
           <h5 class="recent_title">Ранее вы смотрели</h5>
-        </div>
-
-        <div class="swiper recent-swiper">
-          <ul class="swiper-wrapper recent_wrapper">
-            <li class="swiper-slide best_item">
+          <ul class="recent_wrapper">
+            <li class="best_item">
               <a href="#">
                 <div class="best_buttons">
                   <button class="best_btn best_btn-orange">В наличии</button>
@@ -583,7 +586,7 @@
               </a>
             </li>
 
-            <li class="swiper-slide best_item">
+            <li class="best_item">
               <a href="#">
                 <div class="best_buttons">
                   <button class="best_btn best_btn-orange">В наличии</button>
@@ -602,7 +605,7 @@
                 <p class="best_price">61 990 ₽</p>
               </a>
             </li>
-            <li class="swiper-slide best_item">
+            <li class="best_item">
               <a href="#">
                 <div class="best_buttons">
                   <button class="best_btn best_btn-orange">В наличии</button>
@@ -629,7 +632,7 @@
                 <p class="best_price">209 990 ₽</p>
               </a>
             </li>
-            <li class="swiper-slide best_item">
+            <li class="best_item">
               <a href="#">
                 <div class="best_buttons">
                   <button class="best_btn best_btn-orange">В наличии</button>
@@ -654,11 +657,6 @@
               </a>
             </li>
           </ul>
-
-          <div class="recent_swiper_arrows">
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div>
         </div>
       </section>
 

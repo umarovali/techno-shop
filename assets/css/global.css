@@ -93,10 +93,24 @@ textarea {
   line-height: 100%;
 }
 
+.header_list_catalog {
+  position: relative;
+}
+
 .header_list_catalog:hover .sub_menu {
   opacity: 1;
   visibility: visible;
   transition: 0.2s linear;
+}
+
+.header_list_catalog::after {
+  content: "";
+  background: transparent;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 34px;
 }
 
 .header_list_catalog p {
@@ -109,6 +123,7 @@ textarea {
 
 .header_list_catalog {
   cursor: pointer;
+  height: 100%;
 }
 
 .header_contact_actions {
@@ -142,12 +157,13 @@ textarea {
   opacity: 0;
   visibility: hidden;
   z-index: 100;
-  width: 100%;
   background: var(--white);
-  position: absolute;
+  position: fixed;
   top: 70px;
   left: 0;
-  padding: 20px 0;
+  right: 0;
+  padding-top: 50px;
+  padding-bottom: 20px;
 }
 
 /* sub menu card */
@@ -257,8 +273,12 @@ textarea {
   background: var(--black);
 }
 
+.menu_burger span:nth-child(2) {
+  height: 2.5px;
+}
+
 .menu_burger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: translateY(6px) rotate(45deg);
 }
 
 .menu_burger.active span:nth-child(2) {
@@ -266,7 +286,7 @@ textarea {
 }
 
 .menu_burger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 /* menu */

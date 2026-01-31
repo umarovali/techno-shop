@@ -18,12 +18,16 @@ var swiper2 = new Swiper(".swiper-card", {
 
 // charapter drop down menu
 
-const chapterArrow = document.querySelector("#chapter_list");
+const chapterArrowTop = document.querySelector(".chapter_arrow-top");
 const chapterList = document.querySelector(".chapter_nav_list");
+const allArrows = document.querySelectorAll(".chapter_arrow");
 
-chapterArrow.addEventListener("click", () => {
-  chapterArrow.classList.toggle("rotate");
+chapterArrowTop.addEventListener("click", () => {
   chapterList.classList.toggle("open");
+
+  allArrows.forEach(arrow => {
+    arrow.classList.toggle("rotate-right");
+  });
 });
 
 
@@ -56,33 +60,3 @@ document.addEventListener("DOMContentLoaded", () => {
     icon.classList.add("fa-play");
   });
 });
-
-// recent swiper
-
-const recentSwiper = new Swiper('.recent-swiper', {
-  slidesPerView: 'auto',
-  spaceBetween: 20,
-  speed: 600,
-
-  watchOverflow: true,
-  centerInsufficientSlides: true, // центрируем, если мало карточек
-
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  breakpoints: {
-    0: {
-      spaceBetween: 10,
-      slidesOffsetBefore: 15,
-      slidesOffsetAfter: 15,
-    },
-    431: {
-      spaceBetween: 20,
-      slidesOffsetBefore: 0,
-      slidesOffsetAfter: 0,
-    },
-  },
-});
-
