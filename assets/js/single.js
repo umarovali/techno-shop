@@ -16,17 +16,57 @@ var swiper2 = new Swiper(".swiper-card", {
   },
 });
 
-// charapter drop down menu
+// chapter active accardion active
 
-const chapterArrowTop = document.querySelector(".chapter_arrow-top");
-const chapterList = document.querySelector(".chapter_nav_list");
-const allArrows = document.querySelectorAll(".chapter_arrow");
+const chapterList = document.querySelector('.chapter_nav_list');
+const tabs = document.querySelectorAll('.chapter_nav_text');
+const arrows = document.querySelectorAll('.chapter_arrow');
+const sections = document.querySelectorAll('.chapters');
 
-chapterArrowTop.addEventListener("click", () => {
-  chapterList.classList.toggle("open");
+let firstClickDone = false;
 
-  allArrows.forEach(arrow => {
-    arrow.classList.toggle("rotate-right");
+function openSection(tab) {
+  const target = tab.dataset.tab;
+  const sectionToShow = document.querySelector(`.chapters[data-content="${target}"]`);
+  if (!sectionToShow) return;
+
+  sections.forEach(s => s.classList.remove('active'));
+  sectionToShow.classList.add('active');
+
+  arrows.forEach(a => a.classList.add('rotate-right'));
+  const activeArrow = tab.querySelector('.chapter_arrow');
+  if (activeArrow) activeArrow.classList.remove('rotate-right');
+
+  tabs.forEach(t => t.classList.remove('chapter_nav_text-active'));
+  tab.classList.add('chapter_nav_text-active');
+}
+
+chapterList.addEventListener('click', (e) => {
+  const arrow = e.target.closest('.chapter_arrow');
+  const tab = e.target.closest('.chapter_nav_text');
+  if (!arrow || !tab) return;
+
+  if (!firstClickDone) {
+    chapterList.classList.add('open');
+    arrows.forEach(a => a.classList.add('rotate-right'));
+    firstClickDone = true;
+    sections.forEach(s => s.classList.remove('active'));
+    return;
+  }
+
+  openSection(tab);
+});
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    if (!firstClickDone) {
+      chapterList.classList.add('open');
+      arrows.forEach(a => a.classList.add('rotate-right'));
+      firstClickDone = true;
+      sections.forEach(s => s.classList.remove('active'));
+    }
+
+    openSection(tab);
   });
 });
 

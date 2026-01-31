@@ -401,25 +401,28 @@
 
       <!-- chapters start -->
 
-      <section class="chapters">
+      <section class="accardion">
         <nav class="chapter_nav">
           <ul class="chapter_nav_list">
-            <li class="chapter_nav_text chapter_nav_text-active">
+            <li
+              data-tab="description"
+              class="chapter_nav_text chapter_nav_text-active"
+            >
               Описание
-              <i
-                class="fa-solid fa-chevron-down chapter_arrow chapter_arrow-top"
-              ></i>
+              <i class="fa-solid fa-chevron-down chapter_arrow"></i>
             </li>
-            <li class="chapter_nav_text">
+            <li data-tab="technical" class="chapter_nav_text">
               Технические характеристики
               <i class="fa-solid fa-chevron-down chapter_arrow"></i>
             </li>
-            <li class="chapter_nav_text">
+            <li data-tab="review" class="chapter_nav_text">
               Отзывы <i class="fa-solid fa-chevron-down chapter_arrow"></i>
             </li>
           </ul>
         </nav>
+      </section>
 
+      <section class="chapters active" data-content="description">
         <div class="container">
           <div class="chapters_foto">
             <img src="../images/hero_swiper/swiper_foto_1.png" alt="" />
@@ -537,15 +540,8 @@
               </p>
             </article>
           </div>
-        </div>
-      </section>
 
-      <!-- chapters end -->
-
-      <!-- video start -->
-
-      <section class="video">
-        <div class="container">
+          <!-- video start -->
           <div class="video_wrapper">
             <video
               poster="../images/single_foto/poster.png"
@@ -556,10 +552,52 @@
               <i class="fa-solid fa-play"></i>
             </button>
           </div>
+
+          <!-- video end -->
         </div>
       </section>
 
-      <!-- video end -->
+      <section class="chapters" data-content="technical">
+        <div class="container">
+          <h4 class="technical_title">Технические характеристики</h4>
+          <p class="technical_text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus
+            veniam quisquam porro dicta rerum beatae et necessitatibus assumenda
+            velit iusto dolorem, inventore magni fugiat culpa! Esse laboriosam
+            similique labore at molestiae quasi? Minima eaque iste quae iure
+            doloremque impedit? Illo tempora delectus accusantium voluptatum
+            totam officiis hic! Voluptatibus perspiciatis omnis totam iste fugit
+            earum id praesentium repellendus ratione veritatis repudiandae hic,
+            dolore, accusamus eligendi magnam, placeat voluptates aliquam
+            maiores quis? Eaque, excepturi blanditiis odit magni placeat
+            expedita id fugit provident aut quis molestias nostrum, voluptates
+            explicabo cumque quae fuga accusantium laborum laudantium, doloribus
+            quo repellendus vero. Unde sunt quas quidem.
+          </p>
+        </div>
+      </section>
+
+      <section class="chapters" data-content="review">
+        <div class="container">
+          <h4 class="review_title">Отзывы</h4>
+          <p class="review_text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus
+            veniam quisquam porro dicta rerum beatae et necessitatibus assumenda
+            velit iusto dolorem, inventore magni fugiat culpa! Esse laboriosam
+            similique labore at molestiae quasi? Minima eaque iste quae iure
+            doloremque impedit? Illo tempora delectus accusantium voluptatum
+            totam officiis hic! Voluptatibus perspiciatis omnis totam iste fugit
+            earum id praesentium repellendus ratione veritatis repudiandae hic,
+            dolore, accusamus eligendi magnam, placeat voluptates aliquam
+            maiores quis? Eaque, excepturi blanditiis odit magni placeat
+            expedita id fugit provident aut quis molestias nostrum, voluptates
+            explicabo cumque quae fuga accusantium laborum laudantium, doloribus
+            quo repellendus vero. Unde sunt quas quidem.
+          </p>
+        </div>
+      </section>
+
+      <!-- chapters end -->
 
       <!-- recent start -->
 
